@@ -1,0 +1,91 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#search-bar {
+    width: 80%;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#autocomplete-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    z-index: 1000;
+    background-color: white;
+    color: black;
+}
+
+#carousel-container {
+    overflow: hidden;
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px 0;
+}
+
+#carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.movie {
+    min-width: 250px;
+    margin: 0 10px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.movie img {
+    width: 100%;
+    border-radius: 15px;
+    transition: opacity 0.5s;
+}
+
+.movie:hover img {
+    opacity: 0;
+}
+
+.movie .moment-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.movie:hover .moment-image {
+    opacity: 1;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Películas</title>
+    <link rel="stylesheet" href="scc/style.css">
+</head>
+<body>
+    <header>
+        <h1>Películas Destacadas</h1>
+        <input type="text" id="searchBar" placeholder="Buscar película...">
+    </header>
+    
+    <div class="carousel-container">
+        <div class="carousel">
+            <!-- Cartas de las películas -->
+            <div class="card" data-title="Avatar">
+                <img src="images/avatar.svg" alt="Avatar">
+                <h2>Avatar</h2>
+                <button onclick="showInfo('Avatar')">Más Info</button>
+            </div>
+            <div class="card" data-title="Capitán América">
+                <img src="images/capitanamerica.svg" alt="Capitán América">
+                <h2>Capitán América</h2>
+                <button onclick="showInfo('Capitán América')">Más Info</button>
+            </div>
+            <div class="card" data-title="Cazafantasmas">
+                <img src="images/cazafantasmas.svg" alt="Cazafantasmas">
+                <h2>Cazafantasmas</h2>
+                <button onclick="showInfo('Cazafantasmas')">Más Info</button>
+            </div>
+            <div class="card" data-title="Cisne Negro">
+                <img src="images/CISNE_NEGRO.svg" alt="Cisne Negro">
+                <h2>Cisne Negro</h2>
+                <button onclick="showInfo('Cisne Negro')">Más Info</button>
+            </div>
+            <div class="card" data-title="Dark Knight">
+                <img src="images/darknight.svg" alt="Dark Knight">
+                <h2>Dark Knight</h2>
+                <button onclick="showInfo('Dark Knight')">Más Info</button>
+            </div>
+            <div class="card" data-title="Deadpool">
+                <img src="images/deadpool.svg" alt="Deadpool">
+                <h2>Deadpool</h2>
+                <button onclick="showInfo('Deadpool')">Más Info</button>
+            </div>
+            <div class="card" data-title="Luciferina">
+                <img src="images/luciferina.svg" alt="Luciferina">
+                <h2>Luciferina</h2>
+                <button onclick="showInfo('Luciferina')">Más Info</button>
+            </div>
+            <div class="card" data-title="Shang-Chi">
+                <img src="images/shang-chi.svg" alt="Shang-Chi">
+                <h2>Shang-Chi</h2>
+                <button onclick="showInfo('Shang-Chi')">Más Info</button>
+            </div>
+            <div class="card" data-title="Star Wars">
+                <img src="images/starwars.svg" alt="Star Wars">
+                <h2>Star Wars</h2>
+                <button onclick="showInfo('Star Wars')">Más Info</button>
+            </div>
+            <div class="card" data-title="Uncharted">
+                <img src="images/uncharted.svg" alt="Uncharted">
+                <h2>Uncharted</h2>
+                <button onclick="showInfo('Uncharted')">Más Info</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
