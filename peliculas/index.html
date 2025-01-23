@@ -1,72 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Películas</title>
-    <link rel="stylesheet" href="scc/style.css">
+    <title>Cinepolis</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Películas Destacadas</h1>
-        <input type="text" id="searchBar" placeholder="Buscar película...">
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">CINEPOLIS</a>
+            <div class="nav-links">
+                <a href="#comedia">Comedia</a>
+                <a href="#fantasia">Fantasía</a>
+                <a href="#terror">Terror</a>
+                <a href="#romance">Romance</a>
+                <a href="#accion">Acción</a>
+            </div>
+        </nav>
     </header>
-    
-    <div class="carousel-container">
-        <div class="carousel">
-            <!-- Cartas de las películas -->
-            <div class="card" data-title="Avatar">
-                <img src="images/avatar.svg" alt="Avatar">
-                <h2>Avatar</h2>
-                <button onclick="showInfo('Avatar')">Más Info</button>
-            </div>
-            <div class="card" data-title="Capitán América">
-                <img src="images/capitanamerica.svg" alt="Capitán América">
-                <h2>Capitán América</h2>
-                <button onclick="showInfo('Capitán América')">Más Info</button>
-            </div>
-            <div class="card" data-title="Cazafantasmas">
-                <img src="images/cazafantasmas.svg" alt="Cazafantasmas">
-                <h2>Cazafantasmas</h2>
-                <button onclick="showInfo('Cazafantasmas')">Más Info</button>
-            </div>
-            <div class="card" data-title="Cisne Negro">
-                <img src="images/CISNE_NEGRO.svg" alt="Cisne Negro">
-                <h2>Cisne Negro</h2>
-                <button onclick="showInfo('Cisne Negro')">Más Info</button>
-            </div>
-            <div class="card" data-title="Dark Knight">
-                <img src="images/darknight.svg" alt="Dark Knight">
-                <h2>Dark Knight</h2>
-                <button onclick="showInfo('Dark Knight')">Más Info</button>
-            </div>
-            <div class="card" data-title="Deadpool">
-                <img src="images/deadpool.svg" alt="Deadpool">
-                <h2>Deadpool</h2>
-                <button onclick="showInfo('Deadpool')">Más Info</button>
-            </div>
-            <div class="card" data-title="Luciferina">
-                <img src="images/luciferina.svg" alt="Luciferina">
-                <h2>Luciferina</h2>
-                <button onclick="showInfo('Luciferina')">Más Info</button>
-            </div>
-            <div class="card" data-title="Shang-Chi">
-                <img src="images/shang-chi.svg" alt="Shang-Chi">
-                <h2>Shang-Chi</h2>
-                <button onclick="showInfo('Shang-Chi')">Más Info</button>
-            </div>
-            <div class="card" data-title="Star Wars">
-                <img src="images/starwars.svg" alt="Star Wars">
-                <h2>Star Wars</h2>
-                <button onclick="showInfo('Star Wars')">Más Info</button>
-            </div>
-            <div class="card" data-title="Uncharted">
-                <img src="images/uncharted.svg" alt="Uncharted">
-                <h2>Uncharted</h2>
-                <button onclick="showInfo('Uncharted')">Más Info</button>
-            </div>
+
+    <div class="search-container">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar películas...">
         </div>
+        <div id="searchResults" class="movies-grid"></div>
     </div>
+
+    <main class="categories-container">
+        <section id="comedia" class="category-section">
+            <h2>Comedia</h2>
+            <div class="movie-carousel">
+                <!-- Ejemplo de carta de película para Cazafantasmas -->
+                <div class="movie-card" data-movie="Cazafantasmas">
+                    <img class="normal-img" src="images/cazafantasmas.jpg" alt="Cazafantasmas">
+                    <img class="momento-img" src="images/momentocazafantasmas.jpg" alt="Momento Cazafantasmas">
+                    <div class="movie-info">
+                        <h3>Cazafantasmas</h3>
+                        <p>1h 45m | $7</p>
+                    </div>
+                </div>
+                <div class="movie-card" data-movie="Deadpool">
+                    <img class="normal-img" src="images/deadpool3.jpg" alt="Deadpool">
+                    <img class="momento-img" src="images/Deadpool-Wolverine-momento.jpg" alt="Momento Deadpool">
+                    <div class="movie-info">
+                        <h3>Deadpool</h3>
+                        <p>1h 48m | $8</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fantasia" class="category-section">
+            <h2>Fantasía</h2>
+            <div class="movie-carousel">
+                <div class="movie-card" data-movie="Avatar">
+                    <img class="normal-img" src="images/avatar-66ca0a9027f05.jpg" alt="Avatar">
+                    <img class="momento-img" src="images/momentoavatar.jpg" alt="Momento Avatar">
+                    <div class="movie-info">
+                        <h3>Avatar</h3>
+                        <p>2h 42m | $10</p>
+                    </div>
+                </div>
+                <div class="movie-card" data-movie="Star Wars">
+                    <img class="normal-img" src="images/starwars.jpg" alt="Star Wars">
+                    <img class="momento-img" src="images/momento starwars.jpg" alt="Momento Star Wars">
+                    <div class="movie-info">
+                        <h3>Star Wars</h3>
+                        <p>2h 1m | $10</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="terror" class="category-section">
+            <h2>Terror</h2>
+            <div class="movie-carousel">
+                <div class="movie-card" data-movie="Cisne Negro">
+                    <img class="normal-img" src="images/CISNE-NEGRO.jpg" alt="Cisne Negro">
+                    <img class="momento-img" src="images/momentocisnenegro.jpg" alt="Momento Cisne Negro">
+                    <div class="movie-info">
+                        <h3>Cisne Negro</h3>
+                        <p>1h 48m | $9</p>
+                    </div>
+                </div>
+                <div class="movie-card" data-movie="Luciferina">
+                    <img class="normal-img" src="images/lucifernia.jpg" alt="Luciferina">
+                    <img class="momento-img" src="images/luciferina.jpg" alt="Momento Luciferina">
+                    <div class="movie-info">
+                        <h3>Luciferina</h3>
+                        <p>1h 31m | $6</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="accion" class="category-section">
+            <h2>Acción</h2>
+            <div class="movie-carousel">
+                <div class="movie-card" data-movie="Capitán América">
+                    <img class="normal-img" src="images/capitanamerica.jpg" alt="Capitán América">
+                    <img class="momento-img" src="images/capitanamericamomento.jpg" alt="Momento Capitán América">
+                    <div class="movie-info">
+                        <h3>Capitán América</h3>
+                        <p>2h 4m | $8</p>
+                    </div>
+                </div>
+                <div class="movie-card" data-movie="Dark Knight">
+                    <img class="normal-img" src="images/darknight.jpg" alt="Dark Knight">
+                    <img class="momento-img" src="images/momentodarknight.jpg" alt="Momento Dark Knight">
+                    <div class="movie-info">
+                        <h3>Dark Knight</h3>
+                        <p>2h 32m | $11</p>
+                    </div>
+                </div>
+                <div class="movie-card" data-movie="Shang-Chi">
+                    <img class="normal-img" src="images/shang-chi.png" alt="Shang-Chi">
+                    <img class="momento-img" src="images/shang-chi.jpg" alt="Momento Shang-Chi">
+                    <div class="movie-info">
+                        <h3>Shang-Chi</h3>
+                        <p>2h 12m | $9</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="js/main.js"></script>
 </body>
